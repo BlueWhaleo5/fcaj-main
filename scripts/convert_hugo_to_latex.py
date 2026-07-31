@@ -260,9 +260,6 @@ def latex_escape_cell(text):
     # Remove markdown links <https://...> -> https://...
     text = re.sub(r"<(https?://[^>]+)>", r"\1", text)
 
-    # Markdown bold
-    text = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", text)
-
     replacements = {
         "\\": r"\textbackslash{}",
         "&": r"\&",
@@ -276,15 +273,14 @@ def latex_escape_cell(text):
         "^": r"\textasciicircum{}",
     }
 
-    # Escape only outside simple LaTeX commands introduced above.
-    # Simpler and okay for report use:
     for k, v in replacements.items():
         if k == "\\":
             continue
         text = text.replace(k, v)
 
-    # Restore \textbf after escaping braces.
-    text = text.replace(r"\textbf\{", r"\textbf{").replace(r"\}", "}")
+    # Markdown bold, applied after escaping so \textbf{...} braces stay real
+    # (and unescaped literal braces elsewhere in the cell aren't disturbed).
+    text = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", text)
 
     return text
 
