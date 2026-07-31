@@ -31,7 +31,7 @@ The system is organized as five independent CDK stacks, each deployable and test
 
 ![ServerlessFinance architecture](/images/2-Proposal/serverless_architecture.png)
 
-- *Three dashed gray lines, labeled "25", run from the Worker Lambda, Step Functions (and other Lambdas) to CloudWatch. This is the metrics/logs stream. All Lambdas and Step Functions automatically send logs and metrics to CloudWatch in the background, not an explicit API call in the main stream. Because it runs in parallel and asynchronously with the main stream (not the "next step" in the sequence 1→27), the dashed lines are used to distinguish it.*
+- *Three dashed gray lines, labeled "25", run from the Worker Lambda, Step Functions (and other Lambdas) to CloudWatch. This is the metrics/logs stream. All Lambdas and Step Functions automatically send logs and metrics to CloudWatch in the background, not an explicit API call in the main stream. Because it runs in parallel and asynchronously with the main stream (not the "next step" in the sequence 1 → 27), the dashed lines are used to distinguish it.*
 
 - *The vertical dashed gray line "On Failure" (from Ingestion Lambda down to SQS DLQ) is the error path, only used when the Ingestion Lambda fails (Lambda retrys but still fails), not a normal path.*
 

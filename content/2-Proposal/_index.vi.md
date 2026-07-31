@@ -31,7 +31,7 @@ Hệ thống được tổ chức thành 5 CDK stack độc lập, mỗi stack c
 
 ![Kiến trúc ServerlessFinance](/images/2-Proposal/serverless_architecture.png)
 
-- *Ba đường kẻ ngang màu xám mờ, đánh dấu "25", chạy từ Worker Lambda, Step Functions (và các Lambda khác) đến CloudWatch. Đây là luồng metrics/logs. Tất cả Lambda và Step Functions tự động gửi logs và metrics đến CloudWatch chạy ngầm, không phải là một lời gọi API rõ ràng trong luồng chính. Vì nó chạy song song và bất đồng bộ với luồng chính (không phải "bước tiếp theo" trong chuỗi 1→27), nên dùng đường kẻ mờ để phân biệt.*
+- *Ba đường kẻ ngang màu xám mờ, đánh dấu "25", chạy từ Worker Lambda, Step Functions (và các Lambda khác) đến CloudWatch. Đây là luồng metrics/logs. Tất cả Lambda và Step Functions tự động gửi logs và metrics đến CloudWatch chạy ngầm, không phải là một lời gọi API rõ ràng trong luồng chính. Vì nó chạy song song và bất đồng bộ với luồng chính (không phải "bước tiếp theo" trong chuỗi 1 → 27), nên dùng đường kẻ mờ để phân biệt.*
 
 - *Đường kẻ dọc mờ "On Failure" (từ Ingestion Lambda xuống SQS DLQ) là luồng lỗi, chỉ dùng khi Ingestion Lambda thất bại (Lambda retry nhưng vẫn lỗi), không phải luồng bình thường.*
 
