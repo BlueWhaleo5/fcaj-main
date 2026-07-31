@@ -42,4 +42,6 @@ Thời kỳ các AI Agent chỉ dừng lại ở các bài demo trên Terminal �
 ### Bài Đăng Gốc
 
 * **Link:** [Amazon Bedrock AgentCore: Lời Giải Cho Bài Toán Đưa AI Agent Từ Demo ra Production](https://www.facebook.com/groups/awsstudygroupfcj/?multi_permalinks=2231620424968674&notif_id=1785401468277838&notif_t=feedback_reaction_generic&ref=notif)
+
+![Ảnh chụp bài đăng Facebook gốc](/images/3-blog/blog2.png)
     

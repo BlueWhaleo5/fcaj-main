@@ -42,3 +42,5 @@ The era of AI agents that only live as terminal demos is over. With Amazon Bedro
 ### Original Post
 
 * **Link:** [Amazon Bedrock AgentCore: The Answer to Taking an AI Agent From Demo to Production](https://www.facebook.com/groups/awsstudygroupfcj/?multi_permalinks=2231620424968674&notif_id=1785401468277838&notif_t=feedback_reaction_generic&ref=notif)
+
+![Screenshot of the original Facebook post](/images/3-blog/blog2.png)
