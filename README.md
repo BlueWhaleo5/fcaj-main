@@ -1,4 +1,4 @@
-# FCAJ Internship Report
+# FCAJ Report
 
 Bilingual (EN/VI) Hugo site for an AWS internship report, deployed to GitHub Pages. Also generates PDF reports automatically from Hugo content on every push to `main`.
 
